@@ -1,5 +1,3 @@
-from tkinter.filedialog import askopenfile, askdirectory
-
 from readers.Importer import ImportFromFile
 from point_cloud.PointCloud import PointCloud
 from mesh.Mesh import Mesh
