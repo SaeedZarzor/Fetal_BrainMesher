@@ -183,12 +183,12 @@ class ABQWriter(BaseWriter,IWriter):
         self.oldNumToNewNum = {}
         print("Writing node data")
         count = 0
-        for count,n in enumerate(nodeMap.keys()):
+        for count, n in enumerate(nodeMap.keys()):
             if reNumber:
                 nodeNum = count+1
             else:
-                nodeNum = n.number
-            self.oldNumToNewNum[n.number] = nodeNum
+                nodeNum = n
+            self.oldNumToNewNum[n] = nodeNum
             self.f.write(str(nodeNum) + ",\t" + ",\t".join([str(round(i,6)) for i in nodeMap[n].getCoords()])+"\n")
     
     def writeElements(self, reNumber):
@@ -234,8 +234,8 @@ class ABQWriter(BaseWriter,IWriter):
                 else:
                     materialToElements[material] = [num]
         for elsetName,elset_elements in materialToElements.items():
-            print("Writing elset data: " + str(elsetName).upper())
-            self.f.write("*ELSET, ELSET=" + str(elsetName).upper() + '\n')
+            print("Writing elset data: E" + str(int(elsetName)).upper())
+            self.f.write("*ELSET, ELSET=E" + str(int(elsetName)).upper() + '\n')
             elset_elements.sort()
             for x in range(0,len(elset_elements),15):
                 str_to_write = ", ".join([str(self.oldELemTonewELem[y]) for y in elset_elements[x:x+15]])
