@@ -24,6 +24,7 @@ class ImportFromFile(IImport):
     
     def getData(self):
         try:
+            print("Importing mri data from", self.fullPath)
             # Step 1: Using freesurfer and 'recon-all' create mri outputs. Ensure aseg.mgz is created.
             t1_file = self.fullPath
             t1 = nibabel.load(t1_file)
