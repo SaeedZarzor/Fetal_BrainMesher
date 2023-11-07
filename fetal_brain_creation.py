@@ -1,3 +1,7 @@
+#!/opt/homebrew/bin/Python3.10
+# change the directory above #
+######################################
+
 from readers.Importer import ImportFromFile
 from point_cloud.PointCloud import PointCloud
 from mesh.Mesh import Mesh

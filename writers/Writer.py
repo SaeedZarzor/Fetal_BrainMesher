@@ -101,7 +101,7 @@ class BaseWriter():
         self.f.close()
         print("Completed")
         print("New {} file written to ".format(self.__tag__ .upper()) +
-              (self.__path__ + self.__filename__).replace("\\", "/"))
+            (self.__path__ + self.__filename__).replace("\\", "/"))
         
     def initializeMesh(self, mesh):
         """

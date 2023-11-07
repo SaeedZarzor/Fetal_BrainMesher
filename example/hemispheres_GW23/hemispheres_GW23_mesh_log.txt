@@ -1,0 +1,13 @@
+Reading file: example/hemispheres_GW23.nii
+Binary threshold: 0.7
+New abaqus file written to 
+file_in_path: example
+file_in: hemispheres_GW23.nii
+binary_threshold: 0.7
+fileout_types: abaqus
+smooth: True
+iterations: 6
+co_effs: 0.6, -0.4
+file_out_path: example/hemispheres_GW23
+fileout: hemispheres_GW23_mesh
+Model creation complete

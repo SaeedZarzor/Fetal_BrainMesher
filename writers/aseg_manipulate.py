@@ -12,7 +12,7 @@ import numpy as np
 def create_aseg(fileInPath, filename, fileOutPath, data_new):
           
     # Step 1: Using freesurfer and 'recon-all' create mri outputs. Ensure aseg.mgz is created.
-    t1_file = "\\".join([fileInPath, filename])
+    t1_file = "/".join([fileInPath, filename])
     t1 = nb.load(t1_file)
 
     # Now we can save the changed data into a new NIfTI file
